@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/rahul-nalawade-portfolio/static/css/main.2a9c86a0.css",
-    "main.js": "/rahul-nalawade-portfolio/static/js/main.01e1a448.js",
-    "static/js/453.b05d8aa5.chunk.js": "/rahul-nalawade-portfolio/static/js/453.b05d8aa5.chunk.js",
-    "static/media/my photo.png": "/rahul-nalawade-portfolio/static/media/my photo.b8ddfd88b703d15fb46f.png",
-    "static/media/telent.png": "/rahul-nalawade-portfolio/static/media/telent.630e61f906f06ec1092f.png",
-    "static/media/library.png": "/rahul-nalawade-portfolio/static/media/library.e889fba02d283bda274c.png",
-    "static/media/journal.png": "/rahul-nalawade-portfolio/static/media/journal.c4c497b0d47bfc99c30d.png",
-    "static/media/partTime.png": "/rahul-nalawade-portfolio/static/media/partTime.aa4e2937e779f3488065.png",
-    "static/media/bg-light.png": "/rahul-nalawade-portfolio/static/media/bg-light.bac0efb485244a522981.png",
-    "static/media/bg-dark.png": "/rahul-nalawade-portfolio/static/media/bg-dark.f420c6b8458af72de935.png",
-    "index.html": "/rahul-nalawade-portfolio/index.html",
-    "main.2a9c86a0.css.map": "/rahul-nalawade-portfolio/static/css/main.2a9c86a0.css.map",
-    "main.01e1a448.js.map": "/rahul-nalawade-portfolio/static/js/main.01e1a448.js.map",
-    "453.b05d8aa5.chunk.js.map": "/rahul-nalawade-portfolio/static/js/453.b05d8aa5.chunk.js.map"
+    "main.css": "/Rahul-Nalawade-Portfolio/static/css/main.d91c2cd3.css",
+    "main.js": "/Rahul-Nalawade-Portfolio/static/js/main.2adfe2de.js",
+    "static/js/453.b05d8aa5.chunk.js": "/Rahul-Nalawade-Portfolio/static/js/453.b05d8aa5.chunk.js",
+    "static/media/my photo.png": "/Rahul-Nalawade-Portfolio/static/media/my photo.b8ddfd88b703d15fb46f.png",
+    "static/media/telent.png": "/Rahul-Nalawade-Portfolio/static/media/telent.630e61f906f06ec1092f.png",
+    "static/media/library.png": "/Rahul-Nalawade-Portfolio/static/media/library.e889fba02d283bda274c.png",
+    "static/media/journal.png": "/Rahul-Nalawade-Portfolio/static/media/journal.c4c497b0d47bfc99c30d.png",
+    "static/media/partTime.png": "/Rahul-Nalawade-Portfolio/static/media/partTime.aa4e2937e779f3488065.png",
+    "static/media/bg-light.png": "/Rahul-Nalawade-Portfolio/static/media/bg-light.bac0efb485244a522981.png",
+    "static/media/bg-dark.png": "/Rahul-Nalawade-Portfolio/static/media/bg-dark.f420c6b8458af72de935.png",
+    "index.html": "/Rahul-Nalawade-Portfolio/index.html",
+    "main.d91c2cd3.css.map": "/Rahul-Nalawade-Portfolio/static/css/main.d91c2cd3.css.map",
+    "main.2adfe2de.js.map": "/Rahul-Nalawade-Portfolio/static/js/main.2adfe2de.js.map",
+    "453.b05d8aa5.chunk.js.map": "/Rahul-Nalawade-Portfolio/static/js/453.b05d8aa5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a9c86a0.css",
-    "static/js/main.01e1a448.js"
+    "static/css/main.d91c2cd3.css",
+    "static/js/main.2adfe2de.js"
   ]
 }
