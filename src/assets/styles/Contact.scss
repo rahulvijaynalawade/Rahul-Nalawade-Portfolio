@@ -1,48 +1,350 @@
-.contact_wrapper svg {
-  font-size: 1em;
-  vertical-align: middle;
-  margin-right: 5px;
+#contact {
+  width: 100%;
+  position: relative;
+  padding: 40px 0 80px;
 }
+
+.contact_wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+  }
+
+  > p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 650px;
+    margin-bottom: 35px;
+    opacity: 0.8;
+  }
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
 
 .contact-form {
-  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  box-sizing: border-box;
 
-  button {
-    float: right;
-    background-color: white;
-    color: #050f0b;
-  }
+  border-radius: 18px;
 
-  button:hover {
-    background-color: #5000ca;
-    color: white;
-  }
+  background: rgba(255, 255, 255, 0.04);
 
-  fieldset {
-    background-color: white;
-  }
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(12px);
 }
 
-label {
-  font-size: 1.2rem;
-  font-family: 'DomaineDispNar-Medium', sans-serif;
-}
+
+/* =========================
+   NAME + EMAIL
+========================= */
 
 .form-flex {
-  display: flex;
-  gap: 15px;
-  padding-bottom: 15px;
-}
-
-.form-flex .MuiFormControl-root {
   width: 100%;
+  display: flex;
+  gap: 20px;
 }
 
-form {
-  width: 100% !important;
+
+/* =========================
+   INPUTS
+========================= */
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: white;
+
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+
+  outline: none;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease,
+    background 0.25s ease;
 }
 
-.body-form {
-  width: 100% !important;
-  margin-bottom: 15px !important;
+
+/* Name + Email */
+
+.contact-form input {
+  height: 55px;
+  padding: 0 18px;
+}
+
+
+/* Message */
+
+.contact-form textarea {
+  min-height: 180px;
+  padding: 16px 18px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   PLACEHOLDER
+========================= */
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+  border-color: rgba(124, 77, 255, 0.7);
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================
+   FOCUS
+========================= */
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #7b4dff;
+
+  background: rgba(255, 255, 255, 0.09);
+
+  box-shadow:
+    0 0 0 3px rgba(123, 77, 255, 0.15),
+    0 8px 25px rgba(80, 0, 202, 0.15);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   SEND BUTTON
+========================= */
+
+.contact-form button {
+  align-self: flex-end;
+
+  border: none;
+
+  padding: 13px 28px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #7b4dff,
+    #5000ca
+  );
+
+  color: white;
+
+  font-family: "Lato", sans-serif;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(80, 0, 202, 0.3);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+
+/* Button hover */
+
+.contact-form button:hover {
+  background: linear-gradient(
+    135deg,
+    #8c63ff,
+    #5e00e8
+  );
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(80, 0, 202, 0.45);
+}
+
+
+/* Button click */
+
+.contact-form button:active {
+  transform: translateY(0);
+}
+
+
+/* Disabled button */
+
+.contact-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.contact-success {
+  margin: 5px 0 0;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  color: #4ade80 !important;
+}
+
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+.contact-error {
+  margin: 5px 0 0;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  color: #ff6b6b !important;
+}
+
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+.light-mode {
+
+  #contact {
+
+    .contact-form {
+      background: rgba(255, 255, 255, 0.8);
+
+      border: 1px solid rgba(0, 0, 0, 0.08);
+
+      box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      background: white;
+
+      color: #0d1116;
+
+      border-color: rgba(0, 0, 0, 0.15);
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: rgba(13, 17, 22, 0.5);
+    }
+
+    .contact-form input:hover,
+    .contact-form textarea:hover {
+      border-color: #7b4dff;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      background: white;
+
+      border-color: #5000ca;
+
+      box-shadow:
+        0 0 0 3px rgba(80, 0, 202, 0.12),
+        0 8px 25px rgba(80, 0, 202, 0.1);
+    }
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 768px) {
+
+  #contact {
+    padding: 30px 0 60px;
+  }
+
+  .contact_wrapper {
+
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    > p {
+      font-size: 1rem;
+    }
+  }
+
+  .contact-form {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .form-flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-form input {
+    height: 52px;
+  }
+
+  .contact-form textarea {
+    min-height: 150px;
+  }
+
+  .contact-form button {
+    width: 100%;
+    align-self: stretch;
+  }
 }
