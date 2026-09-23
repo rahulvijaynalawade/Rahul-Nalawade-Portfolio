@@ -1,32 +1,59 @@
 import React from "react";
 
-function Expertise() {
+function Timeline() {
   return (
     <>
       <style>{`
-        .custom-skills {
+        .custom-about {
           width: 100%;
           padding: 100px 0;
-
           position: relative;
-
           background:
             radial-gradient(
-              circle at 85% 20%,
-              rgba(80, 0, 202, 0.1),
+              circle at 15% 20%,
+              rgba(80, 0, 202, 0.12),
+              transparent 30%
+            ),
+            radial-gradient(
+              circle at 85% 80%,
+              rgba(80, 0, 202, 0.08),
               transparent 30%
             );
         }
 
-        .custom-skills-content {
+        .custom-about-content {
           width: 80%;
           max-width: 1000px;
           margin: auto;
+          padding: 50px;
+          position: relative;
+          box-sizing: border-box;
+
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          border-radius: 24px;
+
+          background: rgba(255, 255, 255, 0.035);
+
+          backdrop-filter: blur(15px);
+          -webkit-backdrop-filter: blur(15px);
+
+          box-shadow:
+            0 25px 60px rgba(0, 0, 0, 0.3),
+            inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+          transition: all 0.4s ease;
         }
 
-        .custom-skills-label {
-          display: inline-block;
+        .custom-about-content:hover {
+          transform: translateY(-6px);
 
+          box-shadow:
+            0 35px 80px rgba(0, 0, 0, 0.4),
+            inset 0 1px 0 rgba(255, 255, 255, 0.12);
+        }
+
+        .custom-about-label {
+          display: inline-block;
           padding: 7px 14px;
           margin-bottom: 20px;
 
@@ -35,374 +62,256 @@ function Expertise() {
 
           font-size: 12px;
           letter-spacing: 2px;
-
           color: rgba(255, 255, 255, 0.65);
 
           background: rgba(255, 255, 255, 0.04);
         }
 
-        .custom-skills h2 {
+        .custom-about-content h2 {
           font-size: 42px;
           font-weight: 600;
-
-          margin: 0 0 25px 0;
+          margin: 0 0 30px 0;
+          line-height: 1.2;
         }
 
-        .custom-skills h2::after {
+        .custom-about-content h2::after {
           content: "";
-
           display: block;
-
           width: 65px;
           height: 3px;
-
           margin-top: 15px;
-
           background: #5000ca;
-
           border-radius: 5px;
         }
 
-        .custom-skills-intro {
-          max-width: 750px;
-
-          font-size: 17px;
-
+        .custom-about-content p {
+          max-width: 850px;
+          font-size: 16px;
           line-height: 1.8;
-
-          opacity: 0.8;
-
-          margin-bottom: 50px;
+          opacity: 0.85;
+          margin: 0 0 20px 0;
         }
 
-        .custom-skills-grid {
+        .custom-about-content .custom-about-intro {
+          font-size: 18px;
+          opacity: 0.95;
+        }
+
+        .custom-about-cards {
           display: grid;
-
-          grid-template-columns: repeat(2, 1fr);
-
-          gap: 25px;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+          margin-top: 45px;
         }
 
-        .custom-skill-card {
+        .custom-about-card {
           position: relative;
-
-          padding: 30px;
-
-          min-height: 190px;
-
+          padding: 28px;
+          min-height: 170px;
           box-sizing: border-box;
 
-          border-radius: 20px;
-
+          border-radius: 18px;
           border: 1px solid rgba(255, 255, 255, 0.1);
 
           background:
             linear-gradient(
               145deg,
-              rgba(255, 255, 255, 0.065),
+              rgba(255, 255, 255, 0.07),
               rgba(255, 255, 255, 0.015)
             );
 
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
-
           box-shadow:
-            0 18px 40px rgba(0, 0, 0, 0.22),
+            0 15px 35px rgba(0, 0, 0, 0.2),
             inset 0 1px 0 rgba(255, 255, 255, 0.06);
 
-          transition:
-            transform 0.35s ease,
-            box-shadow 0.35s ease,
-            border-color 0.35s ease;
-
+          transition: all 0.35s ease;
           overflow: hidden;
         }
 
-        .custom-skill-card::before {
+        .custom-about-card::before {
           content: "";
-
           position: absolute;
 
-          width: 140px;
-          height: 140px;
+          width: 100px;
+          height: 100px;
 
-          top: -80px;
-          right: -80px;
+          top: -50px;
+          right: -50px;
 
           border-radius: 50%;
 
           background: rgba(80, 0, 202, 0.15);
-
-          filter: blur(20px);
+          filter: blur(15px);
 
           transition: all 0.4s ease;
         }
 
-        .custom-skill-card:hover {
-          transform:
-            translateY(-10px)
-            rotateX(2deg)
-            rotateY(-2deg);
+        .custom-about-card:hover {
+          transform: translateY(-10px) rotateX(2deg);
 
-          border-color: rgba(80, 0, 202, 0.4);
+          border-color: rgba(80, 0, 202, 0.45);
 
           box-shadow:
-            0 30px 60px rgba(0, 0, 0, 0.32),
-            0 0 30px rgba(80, 0, 202, 0.08);
+            0 25px 50px rgba(0, 0, 0, 0.35),
+            0 0 25px rgba(80, 0, 202, 0.08);
         }
 
-        .custom-skill-card:hover::before {
-          width: 190px;
-          height: 190px;
+        .custom-about-card:hover::before {
+          width: 150px;
+          height: 150px;
         }
 
-        .custom-skill-number {
-          display: block;
-
-          font-size: 11px;
-
+        .custom-about-number {
+          font-size: 12px;
           letter-spacing: 2px;
-
           color: #5000ca;
-
-          margin-bottom: 12px;
+          margin-bottom: 15px;
         }
 
-        .custom-skill-card h3 {
-          font-size: 21px;
-
-          margin: 0 0 20px 0;
+        .custom-about-card h3 {
+          font-size: 19px;
+          margin: 0 0 12px 0;
         }
 
-        .custom-skill-list {
-          display: flex;
-
-          flex-wrap: wrap;
-
-          gap: 9px;
+        .custom-about-card p {
+          font-size: 14px;
+          line-height: 1.6;
+          margin: 0;
+          opacity: 0.7;
         }
 
-        .custom-skill-list span {
-          display: inline-block;
-
-          padding: 8px 14px;
-
-          border-radius: 20px;
-
-          font-size: 13px;
-
-           color: #ffffff;
-
-           border: 1px solid rgba(255, 255, 255, 0.16);
-
-           background: rgba(255, 255, 255, 0.07);
-
-          transition: all 0.25s ease;
-        }
-
-        .custom-skill-list span:hover {
-          transform: translateY(-3px);
-
-          color: #ffffff;
-
-          border-color: #5000ca;
-
-          background: rgba(80, 0, 202, 0.2);
-
-          box-shadow: 0 5px 15px rgba(80, 0, 202, 0.2);
-        }
-
-        .light-mode .custom-skill-card {
-          background: rgba(255, 255, 255, 0.75);
-
+        .light-mode .custom-about-content {
+          background: rgba(255, 255, 255, 0.7);
           border-color: rgba(0, 0, 0, 0.08);
 
           box-shadow:
-            0 15px 35px rgba(0, 0, 0, 0.08);
+            0 20px 50px rgba(0, 0, 0, 0.08);
         }
 
-        .light-mode .custom-skill-list span {
-  color: #0d1116;
+        .light-mode .custom-about-card {
+          background: rgba(255, 255, 255, 0.75);
+          border-color: rgba(0, 0, 0, 0.08);
 
-  background: rgba(0, 0, 0, 0.035);
+          box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.08);
+        }
 
-  border-color: rgba(0, 0, 0, 0.12);
-
-  transition:
-    transform 0.25s ease,
-    color 0.25s ease,
-    background 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.light-mode .custom-skill-list span:hover {
-  transform: translateY(-3px);
-
-  color: #5000ca;
-
-  background: rgba(80, 0, 202, 0.08);
-
-  border-color: rgba(80, 0, 202, 0.45);
-
-  box-shadow:
-    0 6px 15px rgba(80, 0, 202, 0.12);
-}
-     
-
-.custom-skill-list span:hover {
-  transform: translateY(-3px);
-
-  color: #ffffff;
-
-  border-color: #5000ca;
-
-  background: rgba(80, 0, 202, 0.16);
-
-  box-shadow:
-    0 6px 18px rgba(80, 0, 202, 0.18);
-}
-
-.light-mode .custom-skills-label {
+        .light-mode .custom-about-label {
           color: #0d1116;
-
           border-color: rgba(0, 0, 0, 0.12);
-
           background: rgba(0, 0, 0, 0.03);
         }
 
         @media screen and (max-width: 900px) {
-          .custom-skills-content {
+          .custom-about-content {
             width: 88%;
+            padding: 35px;
           }
 
-          .custom-skills-grid {
+          .custom-about-cards {
             grid-template-columns: 1fr;
           }
         }
 
         @media screen and (max-width: 600px) {
-          .custom-skills {
+          .custom-about {
             padding: 70px 0;
           }
 
-          .custom-skills-content {
+          .custom-about-content {
             width: 90%;
+            padding: 28px;
+            border-radius: 18px;
           }
 
-          .custom-skills h2 {
+          .custom-about-content h2 {
             font-size: 32px;
           }
 
-          .custom-skills-intro {
+          .custom-about-content .custom-about-intro {
             font-size: 16px;
           }
 
-          .custom-skill-card {
-            padding: 25px;
+          .custom-about-content p {
+            font-size: 15px;
+          }
+
+          .custom-about-card {
+            padding: 24px;
           }
         }
       `}</style>
 
-      <div className="container" id="skills">
-        <div className="custom-skills">
+      <div className="container" id="about">
+        <div className="custom-about">
+          <div className="custom-about-content">
 
-          <div className="custom-skills-content">
-
-            <div className="custom-skills-label">
-              MY SKILLS
+            <div className="custom-about-label">
+              ABOUT ME
             </div>
 
-            <h2>Technologies I Work With</h2>
+            <h2>Java Full Stack Developer</h2>
 
-            <p className="custom-skills-intro">
-              A practical technology stack focused on Java backend development
-              and full-stack web application development.
+            <p className="custom-about-intro">
+              I am a Computer Engineering graduate focused on building
+              practical and scalable web applications using Java and modern
+              full-stack technologies.
             </p>
 
-            <div className="custom-skills-grid">
+            <p>
+              My main focus is backend development with Java, Spring Boot,
+              Spring Security, REST APIs, JWT and JPA/Hibernate. I also work
+              with React and JavaScript to create complete full-stack
+              applications.
+            </p>
 
-              <div className="custom-skill-card">
+            <p>
+              I enjoy turning real-world problems into simple, secure and
+              maintainable software. Along with development, I have solved
+              <strong> 150+ Data Structures and Algorithms problems</strong>
+              to improve my problem-solving skills.
+            </p>
 
-                <span className="custom-skill-number">
-                  01
-                </span>
+            <div className="custom-about-cards">
 
-                <h3>Backend</h3>
+              <div className="custom-about-card">
+                <div className="custom-about-number">01</div>
 
-                <div className="custom-skill-list">
-                  <span>Java</span>
-                  <span>Spring Boot</span>
-                  <span>Spring Security</span>
-                  <span>REST APIs</span>
-                  <span>JWT</span>
-                  <span>JPA / Hibernate</span>
-                </div>
+                <h3>Backend Development</h3>
 
+                <p>
+                  Java, Spring Boot, Spring Security, REST APIs and JWT.
+                </p>
               </div>
 
+              <div className="custom-about-card">
+                <div className="custom-about-number">02</div>
 
-              <div className="custom-skill-card">
+                <h3>Full Stack</h3>
 
-                <span className="custom-skill-number">
-                  02
-                </span>
-
-                <h3>Frontend</h3>
-
-                <div className="custom-skill-list">
-                  <span>React</span>
-                  <span>JavaScript</span>
-                  <span>HTML</span>
-                  <span>CSS</span>
-                </div>
-
+                <p>
+                  React, JavaScript, MySQL, MongoDB and modern web
+                  technologies.
+                </p>
               </div>
 
+              <div className="custom-about-card">
+                <div className="custom-about-number">03</div>
 
-              <div className="custom-skill-card">
+                <h3>Problem Solving</h3>
 
-                <span className="custom-skill-number">
-                  03
-                </span>
-
-                <h3>Database</h3>
-
-                <div className="custom-skill-list">
-                  <span>MySQL</span>
-                  <span>MongoDB</span>
-                </div>
-
-              </div>
-
-
-              <div className="custom-skill-card">
-
-                <span className="custom-skill-number">
-                  04
-                </span>
-
-                <h3>Tools</h3>
-
-                <div className="custom-skill-list">
-                  <span>Git</span>
-                  <span>GitHub</span>
-                  <span>Postman</span>
-                  <span>Maven</span>
-                  <span>IntelliJ IDEA</span>
-                  <span>VS Code</span>
-                </div>
-
+                <p>
+                  150+ DSA problems solved with a focus on logical thinking.
+                </p>
               </div>
 
             </div>
 
           </div>
-
         </div>
       </div>
     </>
   );
 }
 
-export default Expertise;
+export default Timeline;

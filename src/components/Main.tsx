@@ -1,6 +1,7 @@
 import React from "react";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Myphotoo from '../assets/images/my photo.png'         ;
 import '../assets/styles/Main.scss';
 
 function Main() {
@@ -9,7 +10,7 @@ function Main() {
       <div className="about-section">
         <div className="image-wrapper">
           <img
-            src="https://my-aws-assets.s3.us-west-2.amazonaws.com/portfolio-img/avatar_circle.jpeg"
+            src={Myphotoo}
             alt="Rahul Nalawade"
           />
         </div>
@@ -17,7 +18,7 @@ function Main() {
         <div className="content">
           <div className="social_icons">
             <a
-              href="YOUR_GITHUB_URL"
+              href="https://github.com/rahulvijaynalawade"
               target="_blank"
               rel="noreferrer"
             >
@@ -25,7 +26,7 @@ function Main() {
             </a>
 
             <a
-              href="YOUR_LINKEDIN_URL"
+              href="https://www.linkedin.com/in/rahulnalawadea/"
               target="_blank"
               rel="noreferrer"
             >
