@@ -250,7 +250,7 @@ function Timeline() {
               ABOUT ME
             </div>
 
-            <h2>Java Full Stack Developer</h2>
+            {/* <h2>Java Developer</h2> */}
 
             <p className="custom-about-intro">
               I am a Computer Engineering graduate focused on building
@@ -268,7 +268,7 @@ function Timeline() {
             <p>
               I enjoy turning real-world problems into simple, secure and
               maintainable software. Along with development, I have solved
-              <strong> 150+ Data Structures and Algorithms problems</strong>
+              <strong> 200+ Data Structures and Algorithms problems</strong>
               to improve my problem-solving skills.
             </p>
 
@@ -301,7 +301,7 @@ function Timeline() {
                 <h3>Problem Solving</h3>
 
                 <p>
-                  150+ DSA problems solved with a focus on logical thinking.
+                  200+ DSA problems solved with a focus on logical thinking.
                 </p>
               </div>
 
