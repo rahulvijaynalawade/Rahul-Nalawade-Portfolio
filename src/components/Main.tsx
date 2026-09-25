@@ -36,7 +36,7 @@ function Main() {
 
           <h1>Rahul Nalawade</h1>
 
-          <p>Java Developer | Spring Boot & React</p>
+          <p>Java Developer Spring Boot • React • REST APIs • SQL</p>
 
           <div className="mobile_social_icons">
             <a
